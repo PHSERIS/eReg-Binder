@@ -8,7 +8,7 @@
  * PLUGIN NAME: PROTOCOL VERSION/AMENDMENT TRACKING LOG - eReg binder
  * DESCRIPTION:
  * VERSION: 1.0
- * AUTHOR: dd599
+ * AUTHOR: Dimitar Dimitrov
  */
 
 // Call the REDCap Connect file in the main "redcap" directory

@@ -8,7 +8,7 @@
  * PLUGIN NAME:
  * DESCRIPTION:
  * VERSION: 1.0
- * AUTHOR: dd599
+ * AUTHOR: Dimitar Dimitrov
  */
 
 // Call the REDCap Connect file in the main "redcap" directory
@@ -18,7 +18,8 @@ require_once "../../redcap_connect.php";
 require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
 require_once "common_functions.php";
 
-$target_proj_ids = array(4499,4950);
+// Enter your project ID HERE
+$target_proj_ids = array();
 
 // If the Project ID is not setup, then we can't continue
 if(!isset($_GET['pid']) || !is_numeric($_GET['pid'])) {    
