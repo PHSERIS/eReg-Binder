@@ -49,9 +49,13 @@ $subtitle .= RCView::h2(array('class'=>'subtitle', 'style'=>'text-align:left; fo
 //echo var_export($Proj->metadata['protocoltitle'],true);
 echo $subtitle;*/
 
+$metadata = $Proj->metadata;
+
 $headers = RCView::th(array('class'=>'', 'style'=>'text-align:center;color:#800000;padding:5px 10px;vertical-align:bottom;'),"Record ID");
-$headers .= RCView::th(array('class'=>'', 'style'=>'text-align:center;color:#800000;padding:5px 10px;vertical-align:bottom;'),"Review Type");
-$headers .= RCView::th(array('class'=>'', 'style'=>'text-align:center;color:#800000;padding:5px 10px;vertical-align:bottom;'),"Review #");
+$headers .= RCView::th(array('class'=>'', 'style'=>'text-align:center;color:#800000;padding:5px 10px;vertical-align:bottom;'),
+	isset($metadata['doctype']['element_label']) ? $metadata['doctype']['element_label'] : "Review Type");
+$headers .= RCView::th(array('class'=>'', 'style'=>'text-align:center;color:#800000;padding:5px 10px;vertical-align:bottom;'),
+	isset($metadata['docnumber']['element_label']) ? $metadata['docnumber']['element_label'] : "Review #");
 $headers .= RCView::th(array('class'=>'', 'style'=>'text-align:center;color:#800000;padding:5px 10px;vertical-align:bottom;'),"Form Type");
 $headers .= RCView::th(array('class'=>'', 'style'=>'text-align:center;color:#800000;padding:5px 10px;vertical-align:bottom;'),"Description of Subject Population");
 $headers .= RCView::th(array('class'=>'', 'style'=>'text-align:center;color:#800000;padding:5px 10px;vertical-align:bottom;'),"IRB Valid Date");
@@ -62,8 +66,6 @@ $rpt_table_rows = RCView::thead('', RCView::tr('', $headers));
 
 $all_records = Records::getData($Proj->project_id, 'array', null, $Proj->table_pk);
 $numstaff = explode('\\n', $Proj->metadata['numstaff']['element_enum']);
-
-$metadata = $Proj->metadata;
 
 $all_forms = array_keys($Proj->forms);
 $first_form_name = $all_forms[0];
