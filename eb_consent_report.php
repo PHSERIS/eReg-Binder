@@ -7,7 +7,7 @@
 /**
  * PLUGIN NAME: Consent Form tracking - eReg binder
  * DESCRIPTION:
- * VERSION: 1.0
+ * VERSION: 2.0
  * AUTHOR: Dimitar Dimitrov
  */
 

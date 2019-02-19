@@ -1,13 +1,13 @@
 <?php
 
 ##
-# © 2015 Partners HealthCare System, Inc. All Rights Reserved. 
+# © 2019 Partners HealthCare System, Inc. All Rights Reserved. 
 ##
 
 /**
  * PLUGIN NAME:
  * DESCRIPTION:
- * VERSION: 1.0
+ * VERSION: 2.0
  * AUTHOR: Dimitar Dimitrov
  */
 
